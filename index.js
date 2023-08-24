@@ -3,7 +3,7 @@
 // @return an array of unique numbers in the range in random order
 function randomNumGenerator(range) {
     const uniqueNumbers = new Set();
-    while (Array.from(uniqueNumbers).length < range) {
+    while (uniqueNumbers.size < range) {
         uniqueNumbers.add(Math.floor(Math.random() * range + 1))
     }
     return Array.from(uniqueNumbers);

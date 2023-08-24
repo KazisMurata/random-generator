@@ -9,6 +9,6 @@ function randomNumGenerator(range) {
     return Array.from(uniqueNumbers);
 }
 
-const rangeForGenerator = 100;
+const rangeForGenerator = 10000;
 
 console.log(`List of unique numbers from 1 to ${rangeForGenerator}`, randomNumGenerator(rangeForGenerator));

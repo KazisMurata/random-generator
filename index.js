@@ -9,6 +9,19 @@ function randomNumGenerator(range) {
     return Array.from(uniqueNumbers);
 }
 
+function randomNumGenerator2(range) {
+    const arr = [];
+    for (let i = 0; i < range; i++) {
+        arr.push(i+1);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        const randomIndex = Math.floor(Math.random() * range + 1);
+        const num = arr[randomIndex];
+        arr[randomIndex] = arr[i];
+        arr[i] = num;
+    }
+    return arr;
+}
 const rangeForGenerator = 10000;
 
-console.log(`List of unique numbers from 1 to ${rangeForGenerator}`, randomNumGenerator(rangeForGenerator));
+console.log(`List of unique numbers from 1 to ${rangeForGenerator}`, randomNumGenerator2(rangeForGenerator));
